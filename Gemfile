@@ -54,6 +54,9 @@ group :development, :test do
 end
 
 group :development do
+  # Gem increase the application's performance by reducing the number of queries it makes.
+  gem 'bullet'
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
