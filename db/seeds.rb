@@ -1,5 +1,5 @@
 # User
-user1 = User.create(name: "Felix")
+user1 = User.create(name: "Felix", email: "felix@mailex.com", password: "123456")
 
 # Category
 catFood = Category.create(name: "Food", user_id: user1.id)
