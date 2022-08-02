@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :categories, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 16 }
+
+  def balance
+    movements.sum(:amount)
+  end
 end
