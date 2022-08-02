@@ -78,4 +78,10 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #Config sass style
+  config.sass.inline_source_maps = true
+  config.sass.preferred_syntax = :sass
+  config.sass.line_comments = false
+  config.sass.cache = false
 end
