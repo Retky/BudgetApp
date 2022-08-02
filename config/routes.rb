@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "groups#index"
+  root "categories#index"
 
-  resources :groups
+  resources :categories
   resources :movements
 end
