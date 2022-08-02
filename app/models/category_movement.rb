@@ -1,0 +1,2 @@
+class CategoryMovement < ApplicationRecord
+end
