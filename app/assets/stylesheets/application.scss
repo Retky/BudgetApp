@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+@mixin test {
+  border: 1px solid goldenrod;
+}
+
+
+ body {
+  max-width: 420px;
+  margin: 0 auto;
+
+  @include test;
+ }
