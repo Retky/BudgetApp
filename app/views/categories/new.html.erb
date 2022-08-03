@@ -1,0 +1,5 @@
+<%= form_with model: @category, url: categories_path, method: :post do |form| %>
+  <%= form.label :name_of_the_category %><br />
+  <%= form.text_field :name %><br />
+  <%= form.submit "Save" %>
+<% end %>
