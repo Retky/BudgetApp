@@ -1,6 +1,9 @@
 @import "./variables";
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  max-width: 420px;
   height: 36px;
   display: flex;
   justify-content: space-between;
@@ -11,8 +14,10 @@
   div {
     flex: 1;
   }
+}
 
-  @include test;
+.fa-bars {
+  margin-left: 10px;
 }
 
 .button_to {
