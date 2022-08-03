@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.greenBtn {
+  box-sizing: border-box;
+  margin-top: auto;
+  padding: 20px;
+  background-color: $second-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include fullWidth;
+}
+
+.newBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: unset;
+  border: 1px solid $white-color;
+  color: $white-color;
+  margin: auto;
+  cursor: pointer;
+}

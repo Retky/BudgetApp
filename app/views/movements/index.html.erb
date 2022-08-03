@@ -11,6 +11,6 @@
     <%= move.created_at.strftime("%d/%m/%Y") %>
   </div>
 <% end %>
-<div>
-  <%= button_to 'Add Movement', new_movement_path, method: :get %>
+<div class="greenBtn">
+  <%= button_to 'Add Movement', new_movement_path, method: :get, class: 'newBtn' %>
 </div>
