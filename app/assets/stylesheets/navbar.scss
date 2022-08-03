@@ -1,0 +1,21 @@
+@import "./variables";
+
+.navbar {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-color;
+  color: $white-color;
+
+  div {
+    flex: 1;
+  }
+
+  @include test;
+}
+
+.button_to {
+  display: flex;
+  flex-grow: 0;
+}

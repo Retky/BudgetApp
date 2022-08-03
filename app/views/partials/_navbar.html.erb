@@ -1,8 +1,9 @@
-<% if user_signed_in? %>
-  <div> = </div>
-  <%= current_user.name %>
-    <%= @title %>
-  <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= @title %>
-<% end %>
+<div class="navbar">
+  <% if user_signed_in? %>
+    <div> <i class="fa-solid fa-bars"></i> </div>
+    <div class="title" ><%= @title %></div>
+    <div><%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: "signBtn mLeft" %></div>
+  <% else %>
+    <div class="title" ><%= @title %></div>
+  <% end %>
+</div>
