@@ -1,0 +1,14 @@
+<div>
+  Total: 
+  $<%= @category.balance %>
+</div>
+<% @movements.each do |move| %>
+  <div>
+    <%= move.name %>
+    $<%= move.amount %>
+    <%= move.created_at.strftime("%d/%m/%Y") %>
+  </div>
+<% end %>
+<div>
+  <%= button_to 'Add Movement', new_movement_path, method: :get %>
+</div>
