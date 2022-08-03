@@ -1,3 +1,6 @@
+<% @rPath = categories_path %>
+
+
 <%= form_with model: @movement, url: movements_path, method: :post do |form| %>
   <%= form.label :reference_name %><br />
   <%= form.text_field :name %><br />

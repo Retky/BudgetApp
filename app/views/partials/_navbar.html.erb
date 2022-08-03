@@ -1,6 +1,14 @@
 <div class="navbar">
   <% if user_signed_in? %>
-    <div> <i class="fa-solid fa-bars"></i> </div>
+    <div>
+      <% if @rPath.nil? %>
+        <i class="fa-solid fa-bars"></i>
+      <% else %>
+        <%= link_to @rPath do %>
+          <i class="fa-solid fa-arrow-left"></i>
+        <% end %>
+      <% end %>
+    </div>
     <div class="title" ><%= @title %></div>
     <div><%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: "signBtn mLeft" %></div>
   <% else %>
