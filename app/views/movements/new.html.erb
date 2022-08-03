@@ -1,0 +1,12 @@
+<%= form_with model: @movement, url: movements_path, method: :post do |form| %>
+  <%= form.label :reference_name %><br />
+  <%= form.text_field :name %><br />
+  <%= form.label :amount %><br />
+  <%= form.text_field :amount %><br />
+  <%= form.label :categories %><br />
+  <% @categories.each do |category| %>
+    <%= form.check_box :categories, { multiple: true }, category.id, nil %>
+    <%= category.name %><br />
+  <% end %>
+  <%= form.submit "Save" %>
+<% end %>
