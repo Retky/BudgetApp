@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   def index
     @title = 'Categories'
     @user = current_user
+    @categories = @user.categories
 
     render :index
   end

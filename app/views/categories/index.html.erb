@@ -1,0 +1,10 @@
+<div>
+  <% @categories.each do |cat| %>
+    <div><%= cat.icon %></div>
+    <div><%= link_to cat.name, movements_path(category_id: cat.id), method: :get %></div>
+    <div>$ <%= cat.balance %></div>
+  <% end %>
+</div>
+<div>
+  <%= button_to 'New Category', new_category_path, method: :get %>
+</div>
