@@ -1,0 +1,57 @@
+@import "./variables";
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ccc;
+
+  @include fullWidth;
+  @include fullHeight;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    background-color: $white-color;
+    border-bottom: 1px solid #ccc;
+    // border-radius: 5px;
+    // margin-bottom: 10px;
+    // font-size: 1.2rem;
+    // color: $text-color;
+  }
+
+  .actions {
+    margin-top: auto;
+    padding: 20px;
+    background-color: $second-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .formBtn {
+      padding: 10px;
+      background-color: unset;
+      border: 1px solid $white-color;
+      color: $white-color;
+      margin: auto;
+      cursor: pointer;
+    }
+  }
+
+  .formBox {
+    display: flex;
+    align-items: center;
+
+    input {
+      flex: 0 0 5%;
+    }
+
+    label {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+

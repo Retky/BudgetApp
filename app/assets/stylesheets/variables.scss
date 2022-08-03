@@ -7,3 +7,13 @@ $darkB-color: #326bad;
 @mixin test {
   border: 1px solid goldenrod;
 }
+
+@mixin fullWidth {
+  width: 100%;
+  max-width: 420px;
+}
+
+@mixin fullHeight {
+  height: 100vh;
+  max-height: 780px;
+}
