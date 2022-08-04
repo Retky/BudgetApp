@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "categories#index"
+  root "splash#index"
 
   resources :categories
   resources :movements
+  resources :splash, only: [:index]
 end
