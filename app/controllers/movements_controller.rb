@@ -12,14 +12,14 @@ class MovementsController < ApplicationController
 
   def new
     @title = 'New Movement'
-    @categories = Category.where(user_id: current_user.id)
+    @categories = Category.where(author_id: current_user.id)
     @movement = Movement.new
   end
 
   def create
-    @categories = Category.where(user_id: current_user.id)
+    @categories = Category.where(author_id: current_user.id)
     @movement = Movement.new(movement_params)
-    @movement.user_id = current_user.id
+    @movement.author_id = current_user.id
     if @movement.categories.nil?
       flash[:notice] = 'Please select at least one category'
       render :new

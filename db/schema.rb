@@ -19,8 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_042152) do
     t.string "icon", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_categories_on_user_id"
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_categories_on_author_id"
   end
 
   create_table "category_movements", force: :cascade do |t|
@@ -37,8 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_042152) do
     t.float "amount", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_movements_on_user_id"
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_movements_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,8 +54,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_042152) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "categories", "users"
+  add_foreign_key "categories", "users", column: "author_id"
   add_foreign_key "category_movements", "categories"
   add_foreign_key "category_movements", "movements"
-  add_foreign_key "movements", "users"
+  add_foreign_key "movements", "users", column: "author_id"
 end

@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  belongs_to :user
+  belongs_to :author, class_name: 'User'
   has_many :category_movements, dependent: :destroy
   has_many :movements, through: :category_movements
 
