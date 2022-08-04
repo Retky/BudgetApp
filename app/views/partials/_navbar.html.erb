@@ -1,0 +1,23 @@
+<div class="navbar">
+  <% if user_signed_in? %>
+    <div>
+      <% if @rPath.nil? %>
+        <i class="fa-solid fa-bars"></i>
+      <% else %>
+        <%= link_to @rPath do %>
+          <i class="fa-solid fa-arrow-left"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="title" ><%= @title %></div>
+    <div><%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: "signBtn mLeft" %></div>
+  <% else %>
+    <div class="title" ><%= @title %></div>
+  <% end %>
+</div>
+<% if @type == 'movements' %>
+  <div class="total">
+    <p>Total: </p>
+    <p>$<%= @category.balance.round(2) %></p>
+  </div>
+<% end %>

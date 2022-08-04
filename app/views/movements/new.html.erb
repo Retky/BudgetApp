@@ -1,0 +1,21 @@
+<% @rPath = categories_path %>
+
+
+<%= form_with model: @movement, url: movements_path, method: :post, class: 'movForm' do |form| %>
+  <div>
+    <%= form.text_field :name, placeholder: "Reference Name", required: true, class: "newMovFile" %>
+  </div>
+  <div class="movForm2">
+    $<%= form.text_field :amount, required: true, class: "movForm3" %>
+  </div>
+  <div>
+    <%= form.label :categories %><br />
+    <% @categories.each do |category| %>
+      <%= form.check_box :categories, { multiple: true }, category.id, nil %>
+      <%= category.name %><br />
+    <% end %>
+  </div>
+  <div class="greenBtn">
+    <%= form.submit "Save", class: 'newBtn' %>
+  </div>
+<% end %>

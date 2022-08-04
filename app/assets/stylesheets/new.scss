@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.movForm {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 10px;
+
+  @include fullWidth;
+  @include fullHeight;
+}
+
+.newFile {
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    background-color: $white-color;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.newMovFile {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: none;
+  background-color: $white-color;
+  border-bottom: 1px solid #ccc;
+}
+
+.movForm2 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: none;
+  background-color: $white-color;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.movForm3 {
+  border: none;
+  width: 100%;
+}

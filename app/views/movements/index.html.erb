@@ -1,0 +1,19 @@
+<% @rPath = categories_path %>
+<% @type = 'movements' %>
+
+<div class="moves">
+  <% @movements.each do |move| %>
+    <div class="moveCard">
+      <div class="moveInfo">
+        <p><%= move.name %></p>
+        <p>$<%= move.amount %></p>
+      </div>
+      <small>
+        <%= move.created_at.strftime("%d/%m/%Y") %>
+      </small>
+    </div>
+  <% end %>
+</div>
+<div class="greenBtn">
+  <%= button_to 'Add Movement', new_movement_path, method: :get, class: 'newBtn' %>
+</div>

@@ -43,5 +43,8 @@ Feel free to get in touch with any issues or suggestions.
 ## Show your support
 Give a ⭐️ if you like this project!
 
+## Acknowledgments
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
 ## 📝 License
 This project is [MIT](./LICENSE) licensed.

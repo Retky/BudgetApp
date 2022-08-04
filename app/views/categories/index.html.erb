@@ -1,0 +1,16 @@
+<div class="cards">
+  <% @categories.each do |cat| %>
+    <div class="catCard">
+      <div class="iconBox"><%= image_tag(image_path("#{cat.icon}")) %></div>
+      <div class="catInfo">
+        <div>
+          <%= link_to cat.name, movements_path(category_id: cat.id), method: :get %>
+        </div>
+        <div class="balance">$ <%= cat.balance.round(2) %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="greenBtn">
+  <%= button_to 'New Category', new_category_path, method: :get, class: 'newBtn' %>
+</div>
