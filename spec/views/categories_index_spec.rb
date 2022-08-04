@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'capybara/rspec'
 
-RSpec.describe 'Splash Index', type: :feature do
+RSpec.describe 'Categories Index', type: :feature do
   before :each do
     @user = User.new(name: 'John', email: 'jhon@test.com', password: 'password')
     @user.save!
