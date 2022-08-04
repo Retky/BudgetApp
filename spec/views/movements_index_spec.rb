@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'capybara/rspec'
 
-RSpec.describe 'Movements Index', type: :feature do
+RSpec.describe 'Movements New', type: :feature do
   before :each do
     @user = User.new(name: 'John', email: 'jhon@test.com', password: 'password')
     @user.save!
@@ -13,28 +13,32 @@ RSpec.describe 'Movements Index', type: :feature do
     fill_in 'Password', with: 'password'
     click_button 'Log in'
 
-    visit "/movements?category_id=#{@category1.id}"
+    visit new_movement_path
   end
 
   it 'should show the title' do
-    expect(page).to have_content('Food Movements')
-  end
-
-  it 'should show the total amount' do
-    expect(page).to have_content('Total:')
-    expect(page).to have_content('$36.0')
-  end
-
-  it 'should show the movements' do
-    expect(page).to have_content('Hamburger')
-  end
-
-  it 'should have a link to add a movement' do
-    expect(page).to have_content('Add Movement')
-  end
-
-  it 'should redirect to add new movement page' do
-    click_on('Add Movement')
     expect(page).to have_content('New Movement')
+  end
+
+  it 'should have a field to enter the name of the movement' do
+    expect(page).to have_field('movement_name')
+  end
+
+  it 'should have a field to enter the amount of the movement' do
+    expect(page).to have_field('movement_amount')
+  end
+
+  it 'should have a field to select the category of the movement' do
+    expect(page).to have_content('Food')
+  end
+
+  it 'should save the movement when the button is clicked' do
+    fill_in 'movement_name', with: 'Hamburger2'
+    fill_in 'movement_amount', with: '36'
+    check(page.all('checkbox')[0])
+    click_on 'Save'
+    click_on 'Food'
+
+    expect(page).to have_content('Hamburger2')
   end
 end
