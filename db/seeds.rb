@@ -3,9 +3,9 @@ user1 = User.create(name: "Felix", email: "felix@mailex.com", password: "123456"
 user2 = User.create(name: "John", email: "john@mailex.com", password: "123456")
 
 # Categorys
-catFood = Category.create(name: "Food", user_id: user1.id)
-catKids = Category.create(name: "Kids", user_id: user1.id)
-catTransport = Category.create(name: "Transport", user_id: user2.id)
+catFood = Category.create(name: "Food", icon: 'https://picsum.photos/200', user_id: user1.id)
+catKids = Category.create(name: "Kids", icon: 'https://picsum.photos/200', user_id: user1.id)
+catTransport = Category.create(name: "Transport", icon: 'https://picsum.photos/200', user_id: user2.id)
 
 # Movements
 move1 = Movement.create(name: "Michiburger", amount: 7.75, user_id: user1.id)
