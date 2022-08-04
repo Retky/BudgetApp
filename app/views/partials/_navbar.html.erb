@@ -18,6 +18,6 @@
 <% if @type == 'movements' %>
   <div class="total">
     <p>Total: </p>
-    <p>$<%= @category.balance %></p>
+    <p>$<%= @category.balance.round(2) %></p>
   </div>
 <% end %>

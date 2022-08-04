@@ -6,7 +6,7 @@
         <div>
           <%= link_to cat.name, movements_path(category_id: cat.id), method: :get %>
         </div>
-        <div class="balance">$ <%= cat.balance %></div>
+        <div class="balance">$ <%= cat.balance.round(2) %></div>
       </div>
     </div>
   <% end %>
