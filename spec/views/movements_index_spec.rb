@@ -7,7 +7,7 @@ RSpec.describe 'Movements New', type: :feature do
     @user.save!
     @category1 = Category.create(name: 'Food', icon: 'https://picsum.photos/200', user_id: @user.id)
     @movement1 = Movement.create(name: 'Hamburger', amount: 36, user_id: @user.id)
-    @CategoryMovement1 = CategoryMovement.create(category_id: @category1.id, movement_id: @movement1.id)
+    @category_movement1 = CategoryMovement.create(category_id: @category1.id, movement_id: @movement1.id)
     visit new_user_session_path
     fill_in 'Email', with: 'jhon@test.com'
     fill_in 'Password', with: 'password'
