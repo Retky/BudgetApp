@@ -15,3 +15,9 @@
     <div class="title" ><%= @title %></div>
   <% end %>
 </div>
+<% if @type == 'movements' %>
+  <div class="total">
+    <p>Total: </p>
+    <p>$<%= @category.balance %></p>
+  </div>
+<% end %>

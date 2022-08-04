@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+.total {
+  box-sizing: border-box;
+  position: fixed;
+  margin-top: 36px;
+  background-color: $white-color;
+  color: $text-color;
+  padding: 0 15px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px #aaa;
+
+  @include fullWidth;
+}
+
+.moves {
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include fullWidth;
+}
+
+.moveCard {
+  padding: 10px;
+  background-color: $white-color;
+  box-shadow: 1px 1px 1px #aaa;
+  display: flex;
+  flex-direction: column;
+
+  small {
+    color: #aaa;
+    margin-top: 2px;
+    font-size: 0.8rem;
+  }
+}
+
+.moveInfo {
+  margin: 0;
+  color: $text-color;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+  }
+}
