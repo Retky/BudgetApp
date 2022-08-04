@@ -16,10 +16,6 @@
     border: none;
     background-color: $white-color;
     border-bottom: 1px solid #ccc;
-    // border-radius: 5px;
-    // margin-bottom: 10px;
-    // font-size: 1.2rem;
-    // color: $text-color;
   }
 
   .actions {
@@ -29,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
     .formBtn {
       padding: 10px;
       background-color: unset;
@@ -53,5 +49,3 @@
     }
   }
 }
-
-

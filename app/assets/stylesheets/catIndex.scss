@@ -24,9 +24,10 @@
 
 .cards {
   box-sizing: border-box;
-  @include fullWidth;
   padding: 20px;
   color: $text-color;
+
+  @include fullWidth;
 }
 
 .catCard {

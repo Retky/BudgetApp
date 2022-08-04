@@ -1,12 +1,12 @@
 <% @rPath = categories_path %>
 
 
-<%= form_with model: @movement, url: movements_path, method: :post do |form| %>
+<%= form_with model: @movement, url: movements_path, method: :post, class: 'movForm' do |form| %>
   <div>
-    <%= form.text_field :name, placeholder: "Reference Name" %>
+    <%= form.text_field :name, placeholder: "Reference Name", required: true, class: "newMovFile" %>
   </div>
-  <div class="form">
-    $<%= form.text_field :amount %>
+  <div class="movForm2">
+    $<%= form.text_field :amount, required: true, class: "movForm3" %>
   </div>
   <div>
     <%= form.label :categories %><br />

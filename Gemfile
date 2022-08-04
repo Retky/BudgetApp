@@ -6,7 +6,7 @@ ruby '3.1.2'
 # Use devise for authentications
 gem 'devise'
 
-gem "font-awesome-sass", "~> 6.1.2"
+gem 'font-awesome-sass', '~> 6.1.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
